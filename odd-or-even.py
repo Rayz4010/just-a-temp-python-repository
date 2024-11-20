@@ -14,3 +14,8 @@ if x%2==0:
     print("this number ",x,"is even")
 else:
     print("this number",x," is odd")
+
+'''
+got the output perfectly 
+so moving on
+'''
