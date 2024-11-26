@@ -37,8 +37,8 @@ print(list)
 #calling the functions
 maxima=maxi(list)
 minima=mini(list)
-print(" The largest value in the list is: ",maxima)
-print(" The smallest value in the list is: ",minima)
+print("The largest value in the list is: ",maxima)
+print("The smallest value in the list is: ",minima)
 
 
 '''This concludes the program even though ive used the build in module 

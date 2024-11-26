@@ -18,13 +18,31 @@ lets start with it'''
 def rev(l):
     print(l[::-1])
 
-
-n = int(input("Enter the length of the list:"))
-#taking the list
+#defining the variables
 i=0
 list=[]
+
+#taking the list length
+n = int(input("Enter the length of the list:"))
+
+
+#taking the list
 while i<n:
+    #taking a variable k to later join in the list since list takes ' ' as input
     k=input("Enter the list:")
+    #pushing into the list
     list.append(k)
+    #updating
     i=i+1
+
+#calling the function
 rev(list)
+
+
+'''
+
+This concludes the program
+This one was a trickier one as the question was not clear
+
+
+'''
