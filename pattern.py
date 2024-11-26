@@ -31,4 +31,6 @@ num=int(input("Enter how long the pattern will be:"))
 #calling the func 
 pat(num)
 
-
+'''
+This concludes the program 
+'''
