@@ -18,16 +18,8 @@ print the count
 
 #Lets start with the program
 def count (string):
-    string.strip() #removing the spaces from front and back
-    #initasializing the count to 1 because the last wite space is stripped so there is no possible way to count the last word so just initalizing the count to 1 in the progarm only
-    count=0 #count
-    #the for loop
-    for x in string:
-        #checking if there is a white space update cout by 1
-        if x==" " or string.endswith(".") or string.endswith(" "):
-            count+=1 #updating the count by 1
-
-    return count
+    #just using this inbuild function
+    return len(string.split())
 
 '''
 Defining the main function now
