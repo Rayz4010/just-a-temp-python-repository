@@ -2,7 +2,6 @@ import random
 '''
 FUNCTIONS
 '''
-
 #for printing board
 def print_board():
     print()
@@ -11,7 +10,7 @@ def print_board():
     print(z)
     print()
 
-#human input
+#human logic
 def checkh(ing):
     if ing<=8:
         if ing in c:
@@ -24,7 +23,6 @@ def checkh(ing):
         print("Invalid input")
 def inputh(x,y,z):
     inh=int(input("Enter the position between 0-8: "))
-    print(inh,type(inh))
     checkh(inh)
     #if inh>0 and inh<=2:
     if inh==0:
@@ -49,11 +47,11 @@ def inputh(x,y,z):
         z[2]='X'
     return x,y,z
     
-#computer input
+#computer logic
 def checkc(inp):
     if inp in c:
         inp=random.randint(0,8)
-        check(inp)
+        checkc(inp)
     else:
         c.append(inp)
 def inputc(x,y,z):
@@ -81,7 +79,41 @@ def inputc(x,y,z):
         z[2]='0'
     return x,y,z
 
-
+'''
+Game Logic
+'''
+#conditions
+def winning_condition():
+    cond=False
+    if x[0]==x[1]==x[2]=='X' or y[0]==y[1]==y[2]=='X' or z[0]==z[1]==z[2]=='X' or x[0]==y[0]==z[0]=='X' or x[1]==y[1]==z[1]=='X' or x[2]==y[2]==z[2]=='X' or x[0]==y[1]==z[2]=='X' or x[2]==y[1]==z[0]=='X' or x[0]==y[1]==z[2]=='X' or x[2]==y[1]==z[0]=='X':
+        print("You win")
+        cond=True
+        check_winning_condition(cond)
+    elif x[0]==x[1]==x[2]=='0' or y[0]==y[1]==y[2]=='0' or z[0]==z[1]==z[2]=='0' or x[0]==y[0]==z[0]=='0' or x[1]==y[1]==z[1]=='0' or x[2]==y[2]==z[2]=='0' or x[0]==y[1]==z[2]=='0' or x[2]==y[1]==z[0]=='0' or x[0]==y[1]==z[2]=='0' or x[2]==y[1]==z[0]=='0':
+        print("Computer wins")
+        cond=True
+        check_winning_condition(cond)
+    else:
+        print("Draw")
+        cond=False
+        check_winning_condition(cond)       
+def check_winning_condition(cond):
+    if cond==True:
+        exit()
+        
+#main       
+def main():
+    i=0
+    while i==0:
+        inputh(x,y,z)
+        print_board()
+        winning_condition()
+        print(c)
+        inputc(x,y,z)
+        print_board()
+        winning_condition()
+        print(c)
+        
 '''
 Global
 ''' 
@@ -91,13 +123,5 @@ y=["","",""]
 z=["","",""]
 c=[]
 print_board()
+main()
 
-inputc(x,y,z)
-print(c)
-print_board()
-inputh(x,y,z)
-print(c)
-print_board()
-inputc(x,y,z)
-print(c)
-print_board()
