@@ -15,8 +15,7 @@ def checkh(ing):
     if ing<=8:
         if ing in c:
             print("Already filled")
-            ing=int(input("Enter the position between 0-8: "))
-            checkh(ing)
+            inputh(x,y,z)
         else:
             c.append(ing)
     else:
@@ -29,7 +28,7 @@ def inputh(x,y,z):
         x[0]="X"
     if inh==1:
         x[1]='X'
-    if inh==3:
+    if inh==2:
         x[2]='X'
     #if inh>3 and inh<=5:
     if inh==3:
@@ -61,7 +60,7 @@ def inputc(x,y,z):
         x[0]="0"
     if inp==1:
         x[1]='0'
-    if inp==3:
+    if inp==2:
         x[2]='0'
     #if inp>3 and inh<=5:
     if inp==3:
@@ -100,6 +99,11 @@ def winning_condition():
 def check_winning_condition(cond):
     if cond==True:
         exit()
+def check_board_full():
+    if len(x)==3 and len(y)==3 and len(z)==3:
+        print("Board full")
+        exit()
+    
         
 #main       
 def main():
@@ -124,4 +128,4 @@ z=["","",""]
 c=[]
 print_board()
 main()
-
+print(len(x))
