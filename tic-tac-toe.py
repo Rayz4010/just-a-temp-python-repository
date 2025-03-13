@@ -2,6 +2,16 @@ import random
 '''
 FUNCTIONS
 '''
+'''
+Psudocode:
+first just taking 3 list
+each have 3 value where the use can modify
+make a computer which can randomly generate a number
+make sure the user and computer doest not conflict 
+give the winning and drawing conditions 
+a main function giving one chance and ready to call other
+'''
+#rules
 def rules():
     print("0|1|2\n3|4|5\n6|7|8")
     print("the above is the table")
@@ -86,6 +96,8 @@ def inputc(x,y,z):
 '''
 Game Logic
 '''
+
+
 #conditions
 def winning_condition():
     cond=False
@@ -138,3 +150,5 @@ rules()
 print_board()
 main()
 print(len(x))
+
+'''this concludes the program'''
