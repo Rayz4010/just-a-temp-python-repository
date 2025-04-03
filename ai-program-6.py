@@ -5,6 +5,7 @@ and this is from the couse of ai and program no 6
 '''
 
 '''Psudocode:
+no psudocode since i copy pasted the code
 ''' 
 def nearest_neighbour(distance):
     num_cities=len(distance)
